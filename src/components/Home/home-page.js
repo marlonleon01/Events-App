@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function HomePage({data}) {
     return (
-        <main>
+        <>
 			{data.map(ev => (
 					<Link key={ev.id} href={`/events/${ev.id}`}>
 						<Image width={300} height={300} alt={ev.title} src={ev.image}/>
@@ -11,6 +11,6 @@ export default function HomePage({data}) {
 						<p>{ev.description}</p>
 					</Link>
 				))}
-		</main>
+		</>
     )
 }
