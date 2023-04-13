@@ -7,11 +7,11 @@ export default function EventsCategoryPage({data, pageName}) {
             <h1>Events in {pageName}</h1>
             <div>
                 {data.map(ev => (
-                    <Link key={ev.id} href={`/events/${ev.city}/${ev.id}}`} passHref>
+                        <Link key={ev.id} href={`/events/${ev.city}/${ev.id}}`} passHref>
                             <Image src={ev.image} alt={ev.title} width={300} height={300}/>
                             <h2>{ev.title}</h2>
                             <p>{ev.description}</p>
-                    </Link>
+                        </Link>
                 ))}
             </div>
         </>
