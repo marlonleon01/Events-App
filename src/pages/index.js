@@ -21,7 +21,7 @@ export default function Home({title}) {
 		</header>
 
      	<main className={styles.main}>
-			<a href="">
+			<a href="/events/london">
 				<img />
 				<h2>Events in London</h2>
 				<p>
@@ -35,7 +35,7 @@ export default function Home({title}) {
 					deserunt mollit anim id est laborum.
 				</p>
 			</a>
-			<a href="">
+			<a href="/events/sanfransisco">
 				<img />
 				<h2>Events in San Fransisco</h2>
 				<p>
@@ -49,7 +49,7 @@ export default function Home({title}) {
 					deserunt mollit anim id est laborum.
 				</p>
 			</a>
-			<a href="">
+			<a href="/events/barcelona">
 				<img />
 				<h2>Events in Barcelona</h2>
 				<p>
