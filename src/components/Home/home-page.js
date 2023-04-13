@@ -3,14 +3,18 @@ import Image from "next/image"
 
 export default function HomePage({data}) {
     return (
-        <>
+        <div className="home_body">
 			{data.map(ev => (
-					<Link key={ev.id} href={`/events/${ev.id}`}>
-						<Image width={300} height={300} alt={ev.title} src={ev.image}/>
-						<h2>{ev.title}</h2>
-						<p>{ev.description}</p>
+					<Link key={ev.id} href={`/events/${ev.id}`} className="card">
+						<div className="image">
+							<Image width={400} height={300} alt={ev.title} src={ev.image}/>
+						</div>
+						<div className="content">
+							<h2>{ev.title}</h2>
+							<p>{ev.description}</p>
+						</div>
 					</Link>
 				))}
-		</>
+		</div>
     )
 }
