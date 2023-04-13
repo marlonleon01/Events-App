@@ -1,7 +1,7 @@
-export default function Event() {
+export default function EventsPage() {
     return (
         <>
-            <h1>Events Page</h1>
+            <h1>Events page</h1>
             <div>
                 <a href="">
                     <img />
