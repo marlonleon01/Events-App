@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 export default function EventsPage({data}) {
     return (
@@ -6,10 +7,10 @@ export default function EventsPage({data}) {
             <h1>Events page</h1>
             <div>
                 {data.map(ev => (
-                    <a key={ev.id} href={`/events/${ev.id}`}>
+                    <Link key={ev.id} href={`/events/${ev.id}`}>
                         <Image src={ev.image} alt={ev.title} width={300} height={300}/>
                         <h2>{ev.title}</h2>
-                    </a>
+                    </Link>
                 ))}
             </div>
         </>

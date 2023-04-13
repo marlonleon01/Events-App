@@ -15,10 +15,9 @@ export default function Home({data}) {
 
 		<header>
 			<nav>
-				<img />
-				<a href="/" >Home</a>
-				<a href="/events" >Events</a>
-				<a href="/about-us" >About us</a>
+				<Link href="/">Home</Link>
+				<Link href="/events" >Events</Link>
+				<Link href="/about-us" >About us</Link>
 			</nav>
 		</header>
 
