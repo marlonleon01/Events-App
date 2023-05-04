@@ -21,7 +21,7 @@ export default function Header() {
                         </ul>
                     </nav>
                 </div>
-                <h1>Sed ut perspiciatis unde omnis</h1>
+                <p className="title">Sed ut perspiciatis unde omnis</p>
             </div>
         </header>
     )
