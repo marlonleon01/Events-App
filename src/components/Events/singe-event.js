@@ -28,7 +28,8 @@ export default function SingleEvent({data}) {
 
             if (!response.ok) throw new Error(`Error: ${response.status}`)
             const data = await response.json()
-
+            setMessage(data.message)
+            inputEmail.current.value = ""
         } catch (error) {
             console.log("Error", error)
         }

@@ -45,6 +45,6 @@ export default function handler(req, res) {
         fs.writeFileSync(filePath, JSON.stringify({events_categories, allEvents: newAllEvents}))
 
         res.status(200).json({message: `You have been registered successfully
-        with the email: ${email} ${eventId}`})
+        with the email: ${email} for the event: ${eventId}`})
     }
 }
