@@ -1,4 +1,4 @@
-import SingleEvent from "@/components/Events/singe-event"
+import SingleEvent from "@/components/Events/single-event"
 
 export default function EventPage({data}) {
     return <SingleEvent data={data} />
