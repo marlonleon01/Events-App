@@ -1,15 +1,21 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { useRouter } from "next/router"
 import Image from "next/image"
 
 export default function SingleEvent({data}) {
     const inputEmail = useRef()
     const router = useRouter()
+    const [message, setMessage] = useState("")
 
     const onSubmit = async(e) => {
         e.preventDefault()
         const emailValue = inputEmail.current.value
         const eventId = router?.query.eventId
+        const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+
+        if (!emailValue.match(validRegex)) {
+            setMessage("Please input a correct email address")
+        }
 
         try {
             const response = await fetch("/api/email-registration", {
@@ -22,7 +28,6 @@ export default function SingleEvent({data}) {
 
             if (!response.ok) throw new Error(`Error: ${response.status}`)
             const data = await response.json()
-            console.log("POST", data)
 
         } catch (error) {
             console.log("Error", error)
@@ -42,8 +47,9 @@ export default function SingleEvent({data}) {
                     id="email"
                     placeholder="Please insert your email here"
                 />
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
+            <p>{message}</p>
         </div>
     )
 }
