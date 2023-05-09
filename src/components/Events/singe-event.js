@@ -12,7 +12,18 @@ export default function SingleEvent({data}) {
         const eventId = router?.query.eventId
 
         try {
-            
+            const response = await fetch("/api/email-registration", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({email: emailValue, eventId})
+            })
+
+            if (!response.ok) throw new Error(`Error: ${response.status}`)
+            const data = await response.json()
+            console.log("POST", data)
+
         } catch (error) {
             console.log("Error", error)
         }
@@ -31,7 +42,7 @@ export default function SingleEvent({data}) {
                     id="email"
                     placeholder="Please insert your email here"
                 />
-                <button type="submit">Submit</button>
+                <button>Submit</button>
             </form>
         </div>
     )
