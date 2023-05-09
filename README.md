@@ -1,6 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Events App
+
+## Description
+-I created this to practice working with Next.js and learning to build a full stack app
+-I learned the basics and how much next.js helps in making the process of building apps more simple
+
+## Required
+-Code editor (Visual Studio Code recommended)  
+
+## Usage/Features
+-It is an app that allows you to look at events and subscribe to them
+-It was just for practice and not intended for real use
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
